@@ -1,0 +1,339 @@
+/* ================= RESET ================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+/* ================= PAGE BACKGROUND ================= */
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#020617,#0f172a);
+}
+
+/* ================= PROFILE CARD ================= */
+.auth-form{
+    width:380px;
+    background:#020617;
+    padding:30px;
+    border-radius:14px;
+    box-shadow:0 25px 50px rgba(0,0,0,0.6);
+    color:#e5e7eb;
+    text-align:center;
+    margin:100px auto; /* below navbar */
+}
+
+/* HEADING */
+.auth-form h2{
+    color:#fbbf24;
+    margin-bottom:18px;
+    font-size:22px;
+}
+
+/* PROFILE IMAGE */
+.auth-form img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid #fbbf24;
+    margin-bottom:15px;
+}
+
+/* ================= INPUTS ================= */
+.auth-form input{
+    width:100%;
+    padding:12px;
+    margin-bottom:12px;
+    border-radius:8px;
+    border:1px solid #1e293b;
+    background:#020617;
+    color:#fff;
+    outline:none;
+    transition:0.25s;
+}
+
+.auth-form input:focus{
+    border-color:#fbbf24;
+    box-shadow:0 0 0 2px rgba(251,191,36,0.15);
+}
+
+/* DISABLED EMAIL */
+.auth-form input:disabled{
+    opacity:0.6;
+    cursor:not-allowed;
+}
+/* FILE INPUT (PROFILE IMAGE) */
+.auth-form input[type="file"]{
+    width:100%;
+    padding:10px;
+    margin-bottom:14px;
+    border-radius:8px;
+    border:1px dashed #334155;
+    background:#020617;
+    color:#e5e7eb;
+    font-size:13px;
+    cursor:pointer;
+    transition:0.3s ease;
+}
+
+/* HOVER EFFECT */
+.auth-form input[type="file"]:hover{
+    border-color:#fbbf24;
+    background:#020617;
+}
+
+/* FILE BUTTON (CHOOSE FILE) */
+.auth-form input[type="file"]::-webkit-file-upload-button{
+    background:#1e293b;
+    color:#fbbf24;
+    border:none;
+    padding:8px 14px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:13px;
+    margin-right:10px;
+    transition:0.3s;
+}
+
+/* HOVER ON BUTTON */
+.auth-form input[type="file"]::-webkit-file-upload-button:hover{
+    background:#334155;
+}
+
+
+/* ================= BUTTONS ================= */
+.auth-form button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    background:linear-gradient(90deg,#fbbf24,#f59e0b);
+    color:#020617;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.auth-form button:hover{
+    transform:translateY(-1px);
+    box-shadow:0 8px 20px rgba(251,191,36,0.35);
+}
+
+/* CHANGE PASSWORD BUTTON */
+.popup-btn{
+    margin-top:10px;
+    background:#1e293b;
+    color:#fbbf24;
+}
+
+/* LOGOUT LINK */
+.auth-form a{
+    color:#fbbf24;
+    text-decoration:none;
+    font-size:14px;
+}
+
+.auth-form p{
+    margin-top:15px;
+}
+
+/* DELETE ACCOUNT BUTTON */
+.delete-small{
+    margin-top:12px;
+    padding:6px 14px;
+    font-size:13px;
+    background:#7f1d1d;
+    color:#fff;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+/* ================= POPUP BACKGROUND ================= */
+.popup{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.65);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    opacity:0;
+    visibility:hidden;
+    transition:0.35s ease;
+    z-index:1000;
+}
+
+.popup.show{
+    opacity:1;
+    visibility:visible;
+}
+
+/* ================= POPUP BOX ================= */
+.popup-content{
+    background:#020617;
+    padding:32px;
+    width:460px;
+    max-width:92%;
+    border-radius:16px;
+    color:#fff;
+    position:relative;
+    transform:scale(0.85);
+    transition:0.35s ease;
+}
+
+.popup.show .popup-content{
+    transform:scale(1);
+}
+
+/* POPUP HEADING */
+.popup-content h3{
+    text-align:center;
+    color:#fbbf24;
+    margin-bottom:20px;
+    font-size:20px;
+}
+
+/* CLOSE ICON */
+.close{
+    position:absolute;
+    top:12px;
+    right:16px;
+    font-size:22px;
+    cursor:pointer;
+}
+
+/* ================= PASSWORD INPUT WITH EYE ================= */
+.password-box{
+    position:relative;
+    margin-bottom:18px;
+}
+
+.password-box input{
+    width:100%;
+    padding:14px 48px 14px 14px; /* space for eye icon */
+    border-radius:10px;
+    border:1px solid #1e293b;
+    background:#020617;
+    color:#e5e7eb;
+    font-size:14px;
+    outline:none;
+}
+
+.password-box input:focus{
+    border-color:#fbbf24;
+    box-shadow:0 0 0 2px rgba(251,191,36,0.15);
+}
+
+/* EYE ICON */
+.password-box span{
+    position:absolute;
+    right:14px;
+    top:50%;
+    transform:translateY(-50%);
+    cursor:pointer;
+    font-size:18px;
+    opacity:0.8;
+}
+
+.password-box span:hover{
+    opacity:1;
+}
+/* UPDATE PASSWORD BUTTON (POPUP) */
+.popup-content button[name="change_password"]{
+    width:100%;
+    padding:14px;
+    margin-top:12px;
+    border:none;
+    border-radius:10px;
+    background:#fbbf24;
+    color:#022c22;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:all 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.popup-content button[name="change_password"]:hover{
+    transform:translateY(-1px);
+    box-shadow:0 8px 20px rgba(251,191,36,0.35);
+}
+
+/* CLICK EFFECT */
+.popup-content button[name="change_password"]:active{
+    transform:scale(0.98);
+}
+
+
+/* ================= ERROR MESSAGE ================= */
+.error{
+    background:#7f1d1d;
+    color:#fecaca;
+    padding:10px;
+    border-radius:8px;
+    font-size:14px;
+    margin-bottom:14px;
+}
+
+/* ================= SUCCESS ANIMATION ================= */
+.success-box{
+    margin-top:22px;
+    text-align:center;
+    opacity:0;
+    transform:scale(0.8);
+    pointer-events:none;
+}
+
+.success-box.show{
+    opacity:1;
+    transform:scale(1);
+    animation:successFade 0.45s ease forwards;
+}
+
+.checkmark{
+    width:72px;
+    height:72px;
+    line-height:72px;
+    border-radius:50%;
+    background:#16a34a;
+    color:white;
+    font-size:34px;
+    margin:0 auto 10px;
+    animation:checkPop 0.4s ease;
+}
+
+/* ANIMATIONS */
+@keyframes checkPop{
+    0%{ transform:scale(0.5); }
+    100%{ transform:scale(1); }
+}
+
+@keyframes successFade{
+    from{
+        opacity:0;
+        transform:scale(0.8);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width:480px){
+    .auth-form{
+        width:92%;
+        padding:24px;
+        margin:90px auto;
+    }
+
+    .popup-content{
+        width:95%;
+        padding:24px;
+    }
+}
