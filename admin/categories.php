@@ -40,7 +40,7 @@ if (isset($_POST['update'])) {
 <html>
 <head>
     <title>Admin | Categories</title>
-    <link rel="stylesheet" type="text/css" href="css/categories.css">         
+    <link rel="stylesheet" href="css/categories.css?v=<?php echo time(); ?>">
 </head>
 
 <body>
@@ -48,7 +48,7 @@ if (isset($_POST['update'])) {
 <div class="content">
     <div class="topbar">
         <h2>📂 Category Management</h2>
-        <a href="add/add_breed.php" class="add-breed-btn">➕ Add Breed</a>
+        <a href="./add_breed.php" class="add-breed-btn">➕ Add Breed</a>
     </div>
 
 <!-- ================= ADD / EDIT FORM ================= -->

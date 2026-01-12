@@ -103,7 +103,7 @@ JOIN breeds b ON p.breed_id = b.id
 <html>
 <head>
     <title>Pet CRUD</title>
-    <link rel="stylesheet" href="css/pet.css">
+    <link rel="stylesheet" href="css/pet.css?v=<?php echo time(); ?>">
 </head>
 <body>
 <?php include "navbar.php"; ?>

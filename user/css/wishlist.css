@@ -1,0 +1,135 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* ================= PAGE ================= */
+body {
+    background: #FBF3EC;
+    color: #3A3A3A;
+}
+
+/* ================= TITLE ================= */
+.page-title {
+    text-align: center;
+    font-size: 26px;
+    margin: 30px 0;
+}
+
+/* ================= LIST CONTAINER ================= */
+.pet-grid {
+    max-width: 1100px;
+    margin: 0 auto 40px;
+    padding: 0 15px;
+
+    display: flex;
+    flex-direction: column;   /* 🔥 vertical list */
+    gap: 18px;
+}
+
+/* ================= HORIZONTAL CARD ================= */
+.pet-box {
+    background: #FFFFFF;
+    border-radius: 14px;
+    padding: 14px;
+    display: flex;            /* 🔥 horizontal layout */
+    align-items: center;
+    gap: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+/* ================= IMAGE ================= */
+.pet-box img {
+    width: 150px;
+    height: 120px;
+    background: #F4E2CF;
+    border-radius: 12px;
+    object-fit: contain;      /* 🔥 पूरी image दिखे */
+    flex-shrink: 0;
+}
+
+/* ================= CENTER DETAILS ================= */
+.pet-box h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2F4F4F;
+}
+
+.pet-box .price {
+    font-size: 18px;
+    font-weight: 600;
+    color: #6F8F85;
+    margin-top: 6px;
+}
+
+/* wrapper for text */
+.pet-box h3,
+.pet-box .price {
+    margin-bottom: 4px;
+}
+
+/* ================= ACTION BUTTONS (RIGHT) ================= */
+.pet-box .btn,
+.pet-box .out {
+    min-width: 140px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 22px;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 6px;
+    display: inline-block;
+}
+
+/* Add to Cart */
+.pet-box .btn {
+    background: #6F8F85;
+    color: #FFFFFF;
+}
+
+.pet-box .btn:hover {
+    background: #587B70;
+}
+
+/* Remove */
+.pet-box .out {
+    background: #F6D6C3;
+    color: #000000;
+}
+
+.pet-box .out:hover {
+    background: #ff0000;
+}
+
+/* ================= RIGHT ALIGN ================= */
+.pet-box a {
+    margin-left: auto;
+}
+
+/* ================= EMPTY MESSAGE ================= */
+.pet-grid p {
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .pet-box {
+        flex-direction: column;   /* mobile = vertical */
+        text-align: center;
+    }
+
+    .pet-box img {
+        width: 100%;
+        height: 180px;
+    }
+
+    .pet-box a {
+        margin-left: 0;
+        width: 100%;
+    }
+}

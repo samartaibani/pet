@@ -1,0 +1,225 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* ================= PAGE ================= */
+body {
+    background: #FBF3EC;
+    color: #111;
+}
+
+/* ================= TITLE ================= */
+.page-title {
+    font-size: 26px;
+    font-weight: 500;
+    margin: 30px 0 20px 60px;
+}
+
+/* ================= MAIN LAYOUT ================= */
+.cart-layout {
+    display: flex;
+    gap: 30px;
+    padding: 0 60px 50px;
+    align-items: flex-start;
+}
+
+/* ================= LEFT : CART ITEMS ================= */
+.pet-grid {
+    flex: 1;
+}
+
+/* ================= CART ITEM (HORIZONTAL) ================= */
+.pet-box {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 18px 22px;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* ================= IMAGE ================= */
+.img-box {
+    width: 90px;                 /* 🔥 image bigger */
+    height: 90px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    flex-shrink: 0;
+}
+
+.img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;         /* 🔥 full image visible */
+}
+
+/* ================= DETAILS ================= */
+.pet-box h3 {
+    font-size: 20px;             /* 🔥 name bigger */
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.pet-box p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* ================= QUANTITY ================= */
+.qty-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.qty-btn {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #111;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.qty-btn.disabled {
+    background: #ccc;
+    pointer-events: none;
+}
+
+.qty {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* ================= ITEM PRICE ================= */
+.pet-box .price {
+    margin-left: auto;           /* 🔥 right side push */
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* ================= REMOVE BUTTON ================= */
+.pet-box .out {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #111;
+}
+
+/* ================= RIGHT : SUMMARY ================= */
+.cart-summary {
+    width: 340px;                /* 🔥 fixed right panel */
+    background: #ffffff;
+    padding: 22px;
+    border-radius: 16px;
+}
+
+/* ================= SUMMARY TITLE ================= */
+.cart-summary h3 {
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+/* ================= SUMMARY LINES ================= */
+.cart-summary p {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+/* ================= FREE DELIVERY ================= */
+.free-badge {
+    font-size: 13px;
+    color: #c0392b;
+    margin-bottom: 12px;
+}
+
+/* ================= COUPON ================= */
+.coupon-box input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #111;
+    margin-bottom: 10px;
+}
+
+.coupon-box button {
+    width: 100%;
+    padding: 10px;
+    background: #111;
+    color: #fff;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* ================= COUPON MESSAGE ================= */
+.coupon-message {
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+.coupon-message.error {
+    color: #c0392b;
+}
+
+.coupon-message.success {
+    color: #27ae60;
+}
+
+/* ================= TOTAL ================= */
+.total-line {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 18px 0;
+}
+
+/* ================= PLACE ORDER ================= */
+.place-order-btn {
+    display: block;
+    text-align: center;
+    background: #111;
+    color: #fff;
+    padding: 12px;
+    text-decoration: none;
+    border-radius: 20px;
+    letter-spacing: 1px;
+}
+
+/* ================= EMPTY ================= */
+.empty-cart {
+    text-align: center;
+    font-size: 18px;
+    margin: 60px 0;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+    .cart-layout {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .cart-summary {
+        width: 100%;
+    }
+
+    .page-title {
+        margin-left: 20px;
+    }
+}

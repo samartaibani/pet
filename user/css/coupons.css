@@ -1,0 +1,85 @@
+body {
+    background: #FBF3EC;
+    font-family: Arial, sans-serif;
+}
+/* ===== Page Layout ===== */
+.page-layout{
+    display:flex;
+    gap:30px;
+    padding:40px;
+}
+
+/* Left menu already styled — keep it */
+
+/* ===== Right Content ===== */
+.right-content{
+    flex:1;
+    background:#fff;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.05);
+}
+
+/* Title */
+.right-content h2{
+    font-size:26px;
+    margin-bottom:20px;
+    color:#222;
+}
+
+/* ===== Coupon Table ===== */
+.right-content table{
+    width:100%;
+    border-collapse:collapse;
+    background:#fff;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,0.04);
+}
+
+/* Header */
+.right-content th{
+    background:#6F8F85;
+    color:white;
+    text-align:left;
+    padding:16px;
+    font-size:15px;
+    font-weight:600;
+}
+
+/* Cells */
+.right-content td{
+    padding:16px;
+    border-bottom:1px solid #eee;
+    color:#333;
+    font-size:15px;
+}
+
+/* Hover */
+.right-content tr:hover{
+    background:#fff7ef;
+}
+
+/* Status Badge */
+.right-content td:last-child{
+    font-weight:700;
+}
+
+.right-content td:last-child:contains("Available"){
+    color:#22c55e;
+}
+
+.right-content td:last-child:contains("Used"){
+    color:#ef4444;
+}
+
+/* Coupon Code */
+.right-content td:first-child{
+    font-weight:700;
+    color:#ff7b00;
+}
+
+/* Message */
+.right-content td:nth-child(2){
+    color:#6b7280;
+}

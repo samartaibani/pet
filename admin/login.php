@@ -3,23 +3,7 @@
 <html>
 <head>
     <title>Admin Login</title>
-    <style>
-        body { font-family: Arial; background:#f4f4f4; }
-        .box {
-            width: 300px;
-            margin: 100px auto;
-            padding: 20px;
-            background: white;
-            box-shadow: 0 0 10px #ccc;
-        }
-        input, button {
-            width: 100%;
-            padding: 8px;
-            margin: 8px 0;
-        }
-        button { background: #333; color: white; border: none; }
-        .error { color: red; }
-    </style>
+    <link rel="stylesheet" href="css/login.css?v=<?php echo time(); ?>">
 </head>
 <body>
 

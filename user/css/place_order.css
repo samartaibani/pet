@@ -1,0 +1,18 @@
+body {
+    background: #fff8f0;
+    font-family: Arial, sans-serif;
+}
+
+.place-box {
+    max-width: 500px;
+    margin: 60px auto;
+    text-align: center;
+}
+
+.place-box h2 {
+    color: #ff7a00;
+}
+
+.place-box p {
+    font-size: 16px;
+}

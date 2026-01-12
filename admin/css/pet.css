@@ -1,161 +1,140 @@
-/* ================= RESET ================= */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Inter","Poppins",sans-serif;
 }
 
-/* ================= FULL PAGE ================= */
-html, body {
-    width: 93.3%;
-    height: 100%;
-    background: #c4cbd7;   /* full page background */
+body{
+    background:#f5f7fb;
 }
 
-/* ================= MAIN WRAPPER ================= */
-.content {
-    min-height: calc(100vh - 60px); /* navbar height adjust */
-    width: 100%;
-    height: 100%;
-    padding: 30px 40px;
-    background: #e3e7ef;
+/* ===== Layout ===== */
+.content{
+    margin-left:220px;
+    padding:30px;
 }
 
-/* ================= CARD STYLE ================= */
-.content > h2 {
-    margin-bottom: 20px;
-    color: #333;
+/* ===== Headings ===== */
+h2{
+    font-size:24px;
+    color:#111827;
+    margin-bottom:18px;
 }
 
-form {
-    background: #ffffff;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px 20px;
+/* ===== Form Card ===== */
+form{
+    background:#fff;
+    padding:24px;
+    border-radius:16px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.05);
+    max-width:900px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:18px;
 }
 
-/* ================= INPUTS ================= */
-input,
-select,
-textarea {
-    width: 100%;
-    padding: 11px;
-    border: 2px solid #ccc;
-    border-radius: 6px;
-    font-size: 14px;
+/* Inputs */
+form input,
+form select,
+form textarea{
+    padding:14px 16px;
+    border-radius:12px;
+    border:1px solid #e5e7eb;
+    font-size:15px;
 }
 
-input:focus,
-select:focus,
-textarea:focus {
-    outline: none;
-    border-color: #0c0d0f;
+form textarea{
+    grid-column:1/-1;
+    resize:none;
+    min-height:100px;
 }
 
-/* ================= FULL WIDTH ================= */
-textarea,
-button,
-form img,
-form a {
-    grid-column: span 2;
+form input:focus,
+form select:focus,
+form textarea:focus{
+    outline:none;
+    border-color:#ff7b00;
 }
 
-/* ================= TEXTAREA ================= */
-textarea {
-    min-height: 100px;
-    resize: vertical;
+/* Image preview */
+form img{
+    border-radius:10px;
+    margin-top:5px;
 }
 
-/* ================= IMAGE ================= */
-form img {
-    width: 70px;
-    border-radius: 6px;
-    border: 1px solid #ddd;
+/* Buttons */
+form button{
+    background:#ff7b00;
+    border:none;
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    border-radius:14px;
+    cursor:pointer;
+    padding:14px;
+    transition:.3s;
 }
 
-/* ================= BUTTON ================= */
-button {
-    background: #007bff;
-    color: #fff;
-    border: none;
-    padding: 13px;
-    font-size: 15px;
-    border-radius: 6px;
-    cursor: pointer;
+form button:hover{
+    background:#e86f00;
 }
 
-button:hover {
-    background: #0056b3;
+form a{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#e5e7eb;
+    border-radius:14px;
+    text-decoration:none;
+    color:#374151;
+    font-weight:600;
 }
 
-/* ================= CANCEL ================= */
-form a {
-    text-align: center;
-    background: #ff0000;
-    color: #fff;
-    padding: 13px;
-    border-radius: 6px;
-    text-decoration: none;
+/* ===== Table ===== */
+table{
+    width:100%;
+    margin-top:35px;
+    background:#fff;
+    border-radius:16px;
+    overflow:hidden;
+    border-collapse:collapse;
+    box-shadow:0 10px 25px rgba(0,0,0,0.05);
 }
 
-form a:hover {
-    background: #b20006;
+th{
+    background:#ff7b00;
+    color:white;
+    padding:16px;
+    text-align:left;
+    font-weight:600;
 }
 
-/* ================= TABLE ================= */
-table {
-    width: 100%;
-    margin-top: 30px;
-    border-collapse: collapse;
-    background: #ffffff;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+td{
+    padding:16px;
+    border-bottom:1px solid #eee;
+    color:#111827;
 }
 
-th {
-    background: #343a40;
-    color: #fff;
+tr:hover{
+    background:#f9fafb;
 }
 
-th, td {
-    padding: 12px;
-    border: 1px solid #ddd;
-    text-align: center;
+/* Action links */
+td a{
+    text-decoration:none;
+    font-weight:600;
+    margin-right:10px;
 }
 
-tr:nth-child(even) {
-    background: #f8f9fa;
+td a:nth-child(1){
+    color:#2563eb; /* Edit */
 }
 
-/* ================= LINKS ================= */
-table a {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: 500;
+td a:nth-child(2){
+    color:#ef4444; /* Delete */
 }
 
-table a:hover {
-    text-decoration: underline;
-}
-
-/* ================= MOBILE ================= */
-@media (max-width: 768px) {
-
-    form {
-        grid-template-columns: 1fr;
-    }
-
-    textarea,
-    button,
-    form a {
-        grid-column: span 1;
-    }
-
-    .content {
-        padding: 15px;
-    }
+td a:nth-child(3){
+    color:#22c55e; /* Sell */
 }

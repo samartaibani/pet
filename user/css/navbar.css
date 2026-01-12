@@ -1,95 +1,200 @@
+/* ================= RESET ================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
-/* NAVBAR */
-.navbar {
-    display: flex;
-    align-items: center;
-    padding: 16px 60px;
-    background: linear-gradient(90deg, #0f172a, #020617);
-}
-
-/* LOGO – LEFT */
-.logo {
-    color: #fbbf24;
-    font-size: 22px;
-    font-weight: 700;
-    flex: 1;
-}
-
-/* MENU – CENTER */
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 40px;
-    flex: 2;
-    justify-content: center;
-    align-items: center;
-}
-
-/* LINKS */
-.nav-links a {
-    color: #e5e7eb;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 500;
-    position: relative;
-    transition: 0.3s;
-}
-
-.nav-links a:hover {
-    color: #fbbf24;
-}
-
-/* UNDERLINE EFFECT */
-.nav-links a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 0;
-    height: 2px;
-    background: #fbbf24;
-    transition: 0.3s;
-}
-
-.nav-links a:hover::after {
+/* ================= HEADER ================= */
+.site-header {
     width: 100%;
 }
 
-/* PROFILE BOX */
-.profile-box {
+/* ================= TOP INFO BAR ================= */
+.top-info {
+    background: #FBF3EC; /* soft peach */
+    padding: 10px 0;
+    height: 60px;
+}
+
+.info-flex {
     display: flex;
     align-items: center;
-    gap: 8px;
-    color: #fbbf24;
-    font-weight: 600;
-    margin-left: auto; /* RIGHT SIDE */
+    justify-content: space-between;
+    gap: 18px;
 }
 
-.profile-box img {
-    width: 32px;
-    height: 32px;
+.top-info .logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: #3A3A3A;
+}
+
+.info-item {
+    font-size: 14px;
+    color: #3A3A3A;
+    white-space: nowrap;
+}
+
+/* ================= NAVBAR ================= */
+.main-nav {
+    background: #F6D6C3; /* cream */
+    border-bottom: 1px solid #E8DDD2;
+}
+
+.nav-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0;
+}
+
+/* ================= MENU LINKS ================= */
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    color: #3A3A3A;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #6F8F85; /* muted green */
+}
+
+/* ================= WISHLIST & CART ================= */
+.wishlist-nav,
+.cart-nav {
+    position: relative;
+}
+
+.count {
+    position: absolute;
+    top: -6px;
+    right: -10px;
+    background: #6F8F85;
+    color: #fff;
+    font-size: 11px;
+    padding: 2px 6px;
     border-radius: 50%;
-    object-fit: cover;
 }
 
-/* BUTTONS (Login / Profile / Logout) */
+/* ================= PROFILE ================= */
+.profile-box{
+    position:relative;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    cursor:pointer;
+}
+
+/* Profile image */
+.profile-img{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    object-fit:cover;
+    border:2px solid #ff7a00;
+}
+
+/* Dropdown */
+.profile-dropdown{
+    position:absolute;
+    top:55px;
+    right:0;
+    background:#fff;
+    width:200px;
+    border-radius:12px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    display:none;
+    flex-direction:column;
+    overflow:hidden;
+    z-index:999;
+}
+
+/* Dropdown links */
+.profile-dropdown a{
+    padding:12px 16px;
+    text-decoration:none;
+    color:#333;
+    font-size:14px;
+    border-bottom:1px solid #eee;
+    transition:.3s;
+}
+
+.profile-dropdown a:hover{
+    background:#6F8F85;
+    color:white;
+}
+
+.profile-dropdown .logout-link{
+    background:#ffe0e0;
+    color:#c00;
+    font-weight:600;
+}
+.profile-dropdown .logout-link:hover{
+    background:#c00;
+    color:white;
+}
+
+
+/* ================= LOGIN BUTTON ================= */
 .btn {
-    background: #fbbf24;
-    color: #000 !important;
-    padding: 9px 22px;
-    border-radius: 8px;
-    font-weight: 600;
+    background: #6F8F85;
+    color: #fff !important;
+    padding: 7px 16px;
+    border-radius: 20px;
+    font-size: 14px;
     transition: 0.3s;
-    margin-left: 12px;
 }
 
 .btn:hover {
-    background: #f59e0b;
-    transform: translateY(-2px);
+    background: #587B70;
+}
+
+/* ================= MOBILE MENU ================= */
+.menu-toggle {
+    display: none;
+    background: #6F8F85;
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #DCEAE2; /* mint */
+        width: 100%;
+        padding: 15px;
+        margin-top: 10px;
+        border-radius: 12px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .info-flex {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
 }

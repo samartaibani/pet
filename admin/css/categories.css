@@ -1,136 +1,139 @@
-/* ===== GLOBAL ===== */
-body{
+*{
     margin:0;
-    font-family: Arial, sans-serif;
-    background:#f3f4f6;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Inter", "Poppins", sans-serif;
 }
 
-/* ===== CONTENT AREA (WITH SIDEBAR) ===== */
+body{
+    background:#f5f7fb;
+}
+
+/* ===== Layout ===== */
 .content{
-    margin-left:220px;   /* same as sidebar width */
+    margin-left:220px;
     padding:30px;
 }
 
-.content .topbar{
+/* ===== Top Bar ===== */
+.topbar{
+    background:#fff;
+    padding:22px 28px;
+    border-radius:14px;
     display:flex;
-    align-items:center;
     justify-content:space-between;
-    background:#1f2937;
-    padding:14px 20px;
-    border-radius:8px;
-    margin-bottom:20px;
+    align-items:center;
+    box-shadow:0 6px 18px rgba(0,0,0,0.06);
+    margin-bottom:25px;
 }
 
-/* ===== PAGE TITLE ===== */
-.content h2{
-    margin-bottom:20px;
-    color:#ffffff;
+.topbar h2{
+    font-size:24px;
+    color:#111827;
 }
 
-/* ===== FORM ===== */
+/* ===== Add Breed Button ===== */
+.add-breed-btn{
+    background:#ff7b00;
+    color:#fff;
+    padding:12px 22px;
+    border-radius:12px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.add-breed-btn:hover{
+    background:#e86f00;
+}
+
+/* ===== Form Card ===== */
 form{
-    background:#ffffff;
-    padding:20px;
-    width:350px;
-    border-radius:8px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    background:#fff;
+    padding:22px;
+    border-radius:14px;
+    max-width:500px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.05);
 }
 
-form input[type="text"]{
-    width: 94%;
-    padding:10px;
-    border:1px solid #d1d5db;
-    border-radius:6px;
-    font-size:15px;
-    outline:none;
-}
-
-form input[type="text"]:focus{
-    border-color:#2563eb;
-}
-
-/* ===== FORM BUTTON ===== */
-form button{
-    margin-top:12px;
-    padding:10px;
+form input{
     width:100%;
-    background:#2563eb;
-    border:none;
-    color:#ffffff;
+    padding:14px 16px;
+    border-radius:10px;
+    border:1px solid #e5e7eb;
     font-size:15px;
-    border-radius:6px;
+    margin-bottom:15px;
+}
+
+form input:focus{
+    outline:none;
+    border-color:#ff7b00;
+}
+
+/* ===== Buttons ===== */
+form button{
+    background:#ff7b00;
+    border:none;
+    color:#fff;
+    padding:12px 22px;
+    border-radius:12px;
+    font-size:15px;
+    font-weight:600;
     cursor:pointer;
     transition:0.3s;
 }
 
 form button:hover{
-    background:#1d4ed8;
+    background:#e86f00;
 }
 
-/* ===== CANCEL LINK ===== */
 form a{
-    display:inline-block;
-    margin-top:10px;
+    margin-left:15px;
     text-decoration:none;
-    color:#dc2626;
-    font-weight:bold;
-}
-
-/* ===== ADD BREED BUTTON ===== */
-.content .add-breed-btn{
-    display:inline-block;
-    margin-top:20px;
-    padding:10px 18px;
-    background:#16a34a;
-    color:#ffffff;
-    font-size:15px;
     font-weight:600;
-    text-decoration:none;
-    border-radius:8px;
-    box-shadow:0 4px 8px rgba(0,0,0,0.15);
-    transition:0.3s ease;
+    color:#4b5563;
 }
 
-.content .add-breed-btn:hover{
-    background:#15803d;
-    transform:translateY(-2px);
-}
-
-/* ===== TABLE ===== */
+/* ===== Table ===== */
 table{
-    margin-top:30px;
     width:100%;
+    margin-top:30px;
+    background:#fff;
+    border-radius:14px;
+    overflow:hidden;
     border-collapse:collapse;
-    background:#ffffff;
-    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    box-shadow:0 8px 20px rgba(0,0,0,0.05);
 }
 
-table th, table td{
-    padding:12px;
-    border-bottom:1px solid #e5e7eb;
+th{
+    background:#ff7b00;
+    color:white;
+    padding:16px;
     text-align:left;
+    font-weight:600;
 }
 
-table th{
-    background:#1f2937;
-    color:#ffffff;
+td{
+    padding:16px;
+    border-bottom:1px solid #eee;
+    color:#111827;
 }
 
-table tr:hover{
+tr:hover{
     background:#f9fafb;
 }
 
-/* ===== ACTION LINKS ===== */
-table a{
-    color:#2563eb;
+/* ===== Action Links ===== */
+td a{
     text-decoration:none;
     font-weight:600;
+    margin-right:10px;
 }
 
-table a:hover{
-    text-decoration:underline;
+td a:first-child{
+    color:#22c55e;
 }
 
-table a:last-child{
-    color:#dc2626;
+td a:last-child{
+    color:#ef4444;
 }

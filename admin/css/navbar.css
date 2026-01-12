@@ -1,63 +1,68 @@
-body{
+*{
     margin:0;
-    font-family:Arial, sans-serif;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI", sans-serif;
 }
 
-/* SIDEBAR */
+/* Sidebar */
 .sidebar{
-    width:220px;
+    width:240px;
     height:100vh;
-    background:#1f2937;
-    padding-top:20px;
+    background: #ff7a00;
     position:fixed;
     left:0;
     top:0;
+    padding:30px 20px;
+    display:flex;
+    flex-direction:column;
 }
 
-/* LOGO */
-.sidebar .logo{
-    color:#fff;
-    font-size:30px;
-    font-weight:bold;
-    text-align:center;
-    margin-bottom:30px;
+/* Logo */
+.logo{
+    color:#000;
+    font-size:28px;
+    margin-bottom:40px;
+    font-weight:700;
 }
 
-/* MENU */
+/* Links */
 .sidebar a{
-    display:block;
-    color:#fff;
+    color:#000;
     text-decoration:none;
-    font-size:18px;
-    padding:12px 20px;
-    margin:5px 10px;
-    border-radius:6px;
-    transition:0.3s;
+    font-size:16px;
+    padding:12px 15px;
+    border-radius:8px;
+    margin-bottom:8px;
+    display:block;
+    transition:.3s;
+    font-weight:500;
 }
 
+/* Hover */
 .sidebar a:hover{
-    background:#374151;
+    background:#fff;
+    color:#000;
 }
 
-/* LOGOUT */
-.sidebar .logout{
-    position:absolute;
-    bottom:20px;
-    width:100%;
+/* Active */
+.sidebar a.active{
+    background:#fff;
+    color:#000;
 }
 
-.sidebar .logout a{
-    background:#dc2626;
-    margin:15px;
+/* Logout */
+.logout{
+    margin-top:auto;
+}
+
+.logout a{
+    background: red;
+    color:white;
     text-align:center;
+    font-weight:600;
 }
 
-.sidebar .logout a:hover{
+.logout a:hover{
     background:#b91c1c;
-}
-
-/* PAGE CONTENT */
-.content{
-    margin-left:220px;
-    padding:20px;
 }

@@ -1,0 +1,184 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body{
+    background:#f7efe6;   /* same as Available Pets */
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    min-height:100vh;
+}
+
+/* Main container */
+.container{
+    background:#fff;
+    width:900px;
+    max-width:95%;
+    height:520px;
+    border-radius:25px;
+    box-shadow:0 20px 50px rgba(0,0,0,.1);
+    position:relative;
+    overflow:hidden;
+}
+
+/* Forms */
+.form-container{
+    position:absolute;
+    top:0;
+    height:100%;
+    width:50%;
+    padding:50px;
+    transition:.6s ease-in-out;
+}
+
+.sign-in{
+    left:0;
+    z-index:2;
+}
+
+.sign-up{
+    left:0;
+    opacity:0;
+    z-index:1;
+}
+
+/* When active */
+.container.active .sign-in{
+    transform:translateX(100%);
+}
+
+.container.active .sign-up{
+    transform:translateX(100%);
+    opacity:1;
+    z-index:5;
+}
+
+/* Form box */
+form{
+    background:#fff;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    height:100%;
+}
+
+h1{
+    color:#2f4f4f;
+    margin-bottom:10px;
+}
+
+/* Inputs */
+input{
+    background:#f2f2f2;
+    border:none;
+    padding:12px 15px;
+    margin:8px 0;
+    border-radius:12px;
+    font-size:14px;
+}
+
+/* Buttons */
+button{
+    margin-top:15px;
+    padding:12px;
+    border-radius:30px;
+    border:none;
+    background:#6f8f85;  /* pet theme green */
+    color:#fff;
+    font-size:14px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#5c7c73;
+}
+
+/* Errors & success */
+.err{
+    color:red;
+    font-size:13px;
+}
+
+.ok{
+    color:green;
+    font-size:13px;
+}
+
+/* Toggle panel */
+.toggle-container{
+    position:absolute;
+    top:0;
+    left:50%;
+    width:50%;
+    height:100%;
+    overflow:hidden;
+    transition:.6s ease-in-out;
+    z-index:100;
+}
+
+.container.active .toggle-container{
+    transform:translateX(-100%);
+}
+
+.toggle{
+    background:#f3e3d2; /* pet card cream */
+    height:100%;
+    width:200%;
+    position:relative;
+    left:-100%;
+    transition:.6s ease-in-out;
+}
+
+.container.active .toggle{
+    transform:translateX(50%);
+}
+
+/* Panels */
+.toggle-panel{
+    position:absolute;
+    width:50%;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    padding:40px;
+    text-align:center;
+}
+
+.toggle-left{
+    transform:translateX(-200%);
+}
+
+.container.active .toggle-left{
+    transform:translateX(0);
+}
+
+.toggle-right{
+    right:0;
+}
+
+.container.active .toggle-right{
+    transform:translateX(200%);
+}
+
+.toggle-panel h1{
+    color:#2f4f4f;
+    font-size:32px;
+}
+
+.toggle-panel p{
+    color:#555;
+    margin:15px 0;
+}
+
+.toggle-panel button{
+    background:transparent;
+    border:2px solid #6f8f85;
+    color:#6f8f85;
+}
